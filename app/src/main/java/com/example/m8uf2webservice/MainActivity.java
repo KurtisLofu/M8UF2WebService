@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                         mealsList.addAll(example.getMeals());
                         customAdapter.notifyDataSetChanged();
                     }
+                    else {
+                        Toast.makeText(MainActivity.this, "No results", Toast.LENGTH_SHORT).show();
+                    }
                 } catch (Exception ex) {
                     Log.i("tagg", ex.toString());
                 }
@@ -101,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
                         mealsList.clear();
                         mealsList.addAll(example.getMeals());
                         customAdapter.notifyDataSetChanged();
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this, "No results", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception ex) {
                     Log.i("tagg", ex.toString());
